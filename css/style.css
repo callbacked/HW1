@@ -1,0 +1,118 @@
+/* 
+referenced: https://www.w3schools.com/css/css3_fonts.asp for adding my own fonts
+font sources (free to use):
+- https://www.omnibus-type.com/fonts/asap/
+- https://www.fontfabric.com/fonts/prime/
+
+Using Prime font for the clock, Asap-Bold for the headings, and Asap-Regular for the body text
+*/
+@font-face {
+    font-family: 'AsapRegular' ;
+    src: url('../assets/fonts/Asap-Regular.otf');
+}
+
+@font-face {
+  font-family: 'AsapBold' ;
+  src: url('../assets/fonts/Asap-Bold.otf');
+}
+
+@font-face {
+  font-family: 'PrimeLight' ;
+  src: url('../assets/fonts/Prime-Light.otf');
+}
+/* referenced https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient to make a cool gradient*/
+body {
+    background: linear-gradient(to left, #ddbb72, #bb7839); 
+    padding: 20px; 
+  }
+  
+  h1 {
+    
+    font-family: 'AsapBold';
+    text-align: center; 
+    color: rgba(0, 0, 0);
+  }
+
+  h2 {
+    padding: 10px;
+    font-family: 'PrimeLight';
+    color: rgba(0, 0, 0, 0.6); /* made the clock slightly invisible using an alpha value of .6 */
+    text-align: center; 
+  }
+
+  h3 {
+    font-family: 'AsapBold';
+    text-align: center; 
+    color: rgba(0, 0, 0);
+  }
+
+  p {
+    font-family: 'AsapRegular';
+  }
+  ul {
+    font-family: 'AsapRegular'
+  }
+/* Resources that helped in creating the initial shape of the box: 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+    https://www.w3schools.com/css/css3_borders.asp
+    https://www.webucator.com/article/how-to-create-boxes-with-rounded-corners-in-css/
+*/
+  .header-box {
+    margin-bottom: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /*https://www.w3schools.com/css/css3_shadows.asp*/
+    border-radius: 25px;
+    padding: 12px;
+      border: none;
+      background-color: #ffffff77;
+      color: #000000;
+      display: block;
+      text-align: center;
+    }
+
+/* created the same class, but for subheaders because they are left aligned, not center aligned like the previous one*/
+
+  .header-box-subhead {
+    margin-bottom: 50px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); 
+    border-radius: 25px;
+    padding: 12px;
+    border: none;
+    background-color: #ffffff77;
+    text-align: center;
+    display: table;
+  }
+/* Resources that helped me create a table (will also cite this in my HTML code):
+https://www.w3schools.com/css/css_table.asp
+https://www.digitalocean.com/community/tutorials/how-to-style-a-table-with-css
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+https://www.youtube.com/watch?v=lf23OT_OZuo
+
+*/
+  .computer-specs {
+    font-family: 'AsapBold';
+    width: 40%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ffee00;
+}
+
+.computer-specs th,
+.computer-specs td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ffee00;
+}
+
+.computer-specs th, tr{
+    text-align: center;
+    background-color: #f2f2f231;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
